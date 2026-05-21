@@ -4,12 +4,10 @@ import {
   Mail,
   Github,
   GraduationCap,
-  FlaskConical,
   Award,
   Briefcase,
   Sparkles,
   BookOpen,
-  Code2,
   Presentation,
   Users,
 } from "lucide-react";
@@ -18,17 +16,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Claire Chang — Operations Research & Information Engineering" },
+      { title: "Claire Chang — ORIE @ Cornell" },
       {
         name: "description",
         content:
-          "Claire Chang, Ph.D. student at Cornell ORIE. Research in stochastic processes, ranking methods, and information design. Fun-but-academic personal site.",
+          "Claire Chang, Ph.D. student at Cornell ORIE working on combinatorial optimization, fairness, and algorithm design.",
       },
       { property: "og:title", content: "Claire Chang — ORIE @ Cornell" },
       {
         property: "og:description",
         content:
-          "Ph.D. student in Operations Research & Information Engineering. Research, publications, teaching, and more.",
+          "Ph.D. student in Operations Research & Information Engineering. Publications, teaching, awards.",
       },
     ],
     links: [
@@ -56,18 +54,18 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-24 py-14 md:py-20">
-      <div className="mb-8 flex items-center gap-3">
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-accent-foreground">
-          <Icon className="h-4 w-4" />
+    <section id={id} className="scroll-mt-20 py-10 sm:py-14">
+      <div className="mb-5 flex items-center gap-2.5">
+        <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent text-accent-foreground">
+          <Icon className="h-3.5 w-3.5" />
         </span>
         <div>
           {kicker && (
-            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               {kicker}
             </div>
           )}
-          <h2 className="text-3xl md:text-4xl font-normal">{title}</h2>
+          <h2 className="text-2xl sm:text-3xl font-normal font-serif">{title}</h2>
         </div>
       </div>
       {children}
@@ -87,19 +85,17 @@ function Entry({
   children?: React.ReactNode;
 }) {
   return (
-    <article className="rounded-2xl border border-border bg-card p-5 md:p-6 transition-colors hover:border-primary/40">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h3 className="text-lg md:text-xl font-medium text-foreground">{title}</h3>
+    <article className="rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/40">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+        <h3 className="text-base sm:text-lg font-medium text-foreground">{title}</h3>
         {meta && (
-          <span className="text-xs md:text-sm text-muted-foreground tabular-nums">
-            {meta}
-          </span>
+          <span className="text-xs text-muted-foreground tabular-nums">{meta}</span>
         )}
       </div>
-      {sub && (
-        <p className="mt-1 text-sm italic text-muted-foreground">{sub}</p>
+      {sub && <p className="mt-0.5 text-xs sm:text-sm italic text-muted-foreground">{sub}</p>}
+      {children && (
+        <div className="mt-2 text-sm leading-relaxed text-foreground/85">{children}</div>
       )}
-      {children && <div className="mt-3 text-sm leading-relaxed text-foreground/85">{children}</div>}
     </article>
   );
 }
@@ -107,50 +103,45 @@ function Entry({
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Nav */}
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3">
-          <a href="#top" className="font-serif text-xl">
+        <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-2.5">
+          <a href="#top" className="font-serif text-lg">
             Claire <span className="text-primary">Chang</span>
           </a>
-          <nav className="hidden gap-6 text-sm text-muted-foreground md:flex">
-            <a href="#research" className="hover:text-foreground">Research</a>
+          <nav className="hidden gap-5 text-sm text-muted-foreground sm:flex">
             <a href="#publications" className="hover:text-foreground">Publications</a>
-            <a href="#teaching" className="hover:text-foreground">Teaching</a>
-            <a href="#projects" className="hover:text-foreground">Projects</a>
+            <a href="#teaching" className="hover:text-foreground">Work</a>
             <a href="#contact" className="hover:text-foreground">Contact</a>
           </nav>
           <ThemeToggle />
         </div>
       </header>
 
-      <main id="top" className="mx-auto max-w-5xl px-5">
+      <main id="top" className="mx-auto max-w-3xl px-4">
         {/* Hero */}
-        <section className="relative py-16 md:py-28">
+        <section className="relative py-12 sm:py-20">
           <div className="absolute inset-0 -z-10 paper-grain opacity-40" aria-hidden />
-          <div className="absolute right-0 top-10 -z-10 h-40 w-40 rounded-full bg-rose/40 blur-3xl" aria-hidden />
-          <div className="absolute left-10 bottom-0 -z-10 h-32 w-32 rounded-full bg-sage/40 blur-3xl" aria-hidden />
+          <div className="absolute right-0 top-6 -z-10 h-32 w-32 rounded-full bg-rose/40 blur-3xl" aria-hidden />
+          <div className="absolute left-4 bottom-0 -z-10 h-24 w-24 rounded-full bg-sage/40 blur-3xl" aria-hidden />
 
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
+          <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Currently: Ph.D. student at Cornell ORIE
+            Ph.D. student · Cornell ORIE
           </p>
-          <h1 className="font-serif text-5xl leading-[1.05] md:text-7xl">
-            Hi, I'm Claire — I study how{" "}
-            <em className="text-primary">information, uncertainty,</em> and{" "}
-            <span className="squiggle text-primary">decisions</span> tangle together.
+          <h1 className="font-serif text-4xl leading-[1.08] sm:text-6xl">
+            Hi, I'm Claire — I work on{" "}
+            <em className="text-primary">combinatorial optimization</em>,{" "}
+            <span className="squiggle text-primary">fairness</span>, and algorithm design.
           </h1>
-          <p className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground">
-            Operations research by day, ranking algorithms and the occasional
-            audio-tampering experiment by night. I like clean proofs, messy
-            data, and explaining both with a whiteboard marker that's running
-            slightly low on ink.
+          <p className="mt-5 max-w-xl text-sm sm:text-base text-muted-foreground">
+            Advised by David B. Shmoys. I like clean proofs, messy data, and
+            whiteboard markers that are running slightly low on ink.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-2.5">
             <a
-              href="mailto:claires.chang@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
+              href="mailto:csc258@cornell.edu"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
             >
               <Mail className="h-4 w-4" /> Say hi
             </a>
@@ -158,7 +149,7 @@ function Index() {
               href="https://github.com/claireschang/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:bg-muted"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-colors hover:bg-muted"
             >
               <Github className="h-4 w-4" /> GitHub
             </a>
@@ -167,100 +158,77 @@ function Index() {
 
         {/* Education */}
         <Section id="education" icon={GraduationCap} title="Education" kicker="01 — Schooling">
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             <Entry
               title="Cornell University"
-              meta="Expected Spring 2028"
-              sub="Ph.D., Operations Research & Information Engineering — Ithaca, NY"
+              meta="Expected 2028"
+              sub="Ph.D., ORIE — Ithaca, NY"
             >
-              Coursework: Stochastic Processes, Mathematical Programming,
-              Statistics, Structure of Information Networks, Information Design
-              & Multi-Agent RL, Stochastic Control.
+              Combinatorial optimization, fairness, algorithm design. Advised by
+              David B. Shmoys.
             </Entry>
             <Entry
               title="Harvey Mudd College"
               meta="May 2023"
-              sub="B.S., Mathematics & Computer Science — Claremont, CA"
+              sub="B.S., Math & CS — Claremont, CA"
             >
-              Discrete Math, Algorithms, Signal Processing, Analysis, Abstract
-              Algebra, Probability, Deterministic & Stochastic Operations
-              Research.
-            </Entry>
-          </div>
-        </Section>
-
-        {/* Research */}
-        <Section id="research" icon={FlaskConical} title="Research" kicker="02 — Lab notebooks">
-          <div className="grid gap-4">
-            <Entry
-              title="Senior Thesis in Mathematics"
-              meta="Aug 2022 – May 2023"
-              sub="Advisor: Jamie Haddock"
-            >
-              Studied the sensitivity of ranking methods for sports (least
-              squares & Markov chain methods), exploring a network-diffusion
-              interpretation for a family of Laplacian rankings.
-            </Entry>
-            <Entry
-              title="HMC × Boston College Clinic"
-              meta="Aug 2022 – May 2023"
-              sub="Advisors: Lisette de Pillis, Nadia Abuelezam"
-            >
-              Incorporated racism into a COVID-19 infectious disease model
-              using a systems-science approach; modeled interventions for an
-              NIH grant in a team of 5.
-            </Entry>
-            <Entry
-              title="Operations Research Lab"
-              meta="Jan – May 2022"
-              sub="Advisor: Susan Martonosi"
-            >
-              Refined an LP model for optimal price & quantity of hexavalent
-              vaccines for GAVI; built Python tooling for AMPL solver output.
-            </Entry>
-            <Entry
-              title="Music Information Retrieval Lab"
-              meta="May 2021 – Apr 2022"
-              sub="Advisor: Timothy J. Tsai"
-            >
-              Investigated a new Dynamic Time Warping variant to detect audio
-              tampering across 800+ minutes of recordings. First-author paper
-              in <em>Applied Sciences</em> (2022).
+              Algorithms, analysis, probability, deterministic & stochastic
+              operations research.
             </Entry>
           </div>
         </Section>
 
         {/* Publications */}
-        <Section id="publications" icon={BookOpen} title="Publications" kicker="03 — In print">
-          <Entry title="Parameter-Free Ordered Partial Match Alignment with Hidden State Time Warping" meta="Apr 2022" sub="Appl. Sci. 2022, 12, 3783">
-            Chang, C.; Shaw, T.; Goutam, A.; Lau, C.; Shan, M.; Tsai, T.J.{" "}
-            <a
-              href="https://doi.org/10.3390/app12083783"
-              target="_blank"
-              rel="noreferrer"
-              className="text-primary underline-offset-4 hover:underline"
+        <Section id="publications" icon={BookOpen} title="Publications" kicker="02 — In print">
+          <div className="grid gap-3">
+            <Entry
+              title="Optimizing for Fairness in Generalized Kidney Exchange: Theory and Computations"
+              meta="2026"
+              sub="INFORMS Optimization Society Conference"
             >
-              doi.org/10.3390/app12083783
-            </a>
-          </Entry>
+              Chang, C.; Khare, A.; Shmoys, D.{" "}
+              <a
+                href="https://arxiv.org/abs/2605.20070"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary underline-offset-4 hover:underline"
+              >
+                arxiv.org/abs/2605.20070
+              </a>
+            </Entry>
+            <Entry
+              title="Parameter-Free Ordered Partial Match Alignment with Hidden State Time Warping"
+              meta="Apr 2022"
+              sub="Applied Sciences 2022, 12, 3783"
+            >
+              Chang, C.; Shaw, T.; Goutam, A.; Lau, C.; Shan, M.; Tsai, T.J.{" "}
+              <a
+                href="https://doi.org/10.3390/app12083783"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary underline-offset-4 hover:underline"
+              >
+                doi.org/10.3390/app12083783
+              </a>
+            </Entry>
+          </div>
         </Section>
 
         {/* Awards */}
-        <Section id="awards" icon={Award} title="Awards" kicker="04 — Shiny things">
-          <ul className="grid gap-3 md:grid-cols-2">
+        <Section id="awards" icon={Award} title="Awards" kicker="03 — Shiny things">
+          <ul className="grid gap-2.5 sm:grid-cols-2">
             {[
-              ["Robert E. Bechhofer Fellowship", "Cornell · 2023–2024"],
               ["NSF Graduate Research Fellowship", "2023–2028"],
+              ["Robert E. Bechhofer Fellowship", "Cornell · 2023–2024"],
               ["Henry A. Krieger Prize in Decision Sciences", "HMC · Oct 2022"],
-              ["1,000 Dreams Fund + HARMAN's New Face of Tech", "Dec 2020"],
             ].map(([title, meta]) => (
               <li
                 key={title}
-                className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4"
+                className="flex items-start gap-2.5 rounded-xl border border-border bg-card p-3"
               >
                 <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <div>
-                  <div className="font-medium">{title}</div>
+                  <div className="text-sm font-medium">{title}</div>
                   <div className="text-xs text-muted-foreground">{meta}</div>
                 </div>
               </li>
@@ -269,136 +237,104 @@ function Index() {
         </Section>
 
         {/* Teaching & Work */}
-        <Section id="teaching" icon={Briefcase} title="Teaching & Work" kicker="05 — Day jobs">
-          <div className="grid gap-4">
-            <Entry title="Inspirit AI — AI Instructor" meta="Jun 2021 – Present" sub="Remote">
-              Teach high schoolers AI from logistic regression to NLP &
-              neural networks, then mentor through capstone projects.
-            </Entry>
+        <Section id="teaching" icon={Briefcase} title="Teaching & Work" kicker="04 — Day jobs">
+          <div className="grid gap-3">
             <Entry
-              title="HMC Math & CS — Grader / Tutor"
+              title="HMC Math & CS — Teaching Assistant"
               meta="Aug 2020 – Dec 2022"
               sub="Claremont, CA"
             >
               Intro CS, Data Structures, Discrete Math, Computability & Logic,
-              Scientific Computing, Operations Research. Weekly tutoring,
-              emphasizing mathematical clarity.
+              Scientific Computing, Operations Research.
+            </Entry>
+            <Entry
+              title="Amazon Web Services — SDE Intern, RDS"
+              meta="May – Aug 2022"
+            >
+              Built read-replica creation for Single-AZ SQL databases.
+            </Entry>
+            <Entry title="Inspirit AI — AI Instructor" meta="Jun 2021 – Aug 2022" sub="Remote">
+              Taught high schoolers AI from logistic regression to NLP and
+              neural networks.
             </Entry>
             <Entry
               title="HMC Admission — Senior Intern"
               meta="Aug – Dec 2022"
               sub="Claremont, CA"
             >
-              Interviewed prospective students ~5 hrs/week, lowering the
-              barrier for first-gen and low-income applicants.
-            </Entry>
-            <Entry
-              title="Amazon Web Services — SDE Intern, RDS"
-              meta="May – Aug 2022"
-            >
-              Built read-replica creation for Single-AZ SQL databases. Learned
-              the gospel of code review.
-            </Entry>
-            <Entry title="Juni Learning — CS Tutor" meta="Jun 2020 – May 2021" sub="Remote">
-              Taught Scratch, Python, Java, and web dev to students ages 6–18.
+              Interviewed prospective students ~5 hrs/week.
             </Entry>
           </div>
         </Section>
 
         {/* Presentations */}
-        <Section id="presentations" icon={Presentation} title="Presentations" kicker="06 — Talks">
+        <Section id="presentations" icon={Presentation} title="Presentations" kicker="05 — Talks">
           <Entry title="Sensitivity of a Laplacian Family of Ranking Methods">
-            <ul className="space-y-1">
+            <ul className="space-y-1 text-sm">
               <li>MAA SoCal-Nevada Fall Meeting — Dec 2022</li>
-              <li>IMSSRS — April 2023</li>
-              <li>SOCAMS — April 2023</li>
-              <li>MAA SoCal-Nevada Spring Meeting — April 2023</li>
+              <li>IMSSRS — Apr 2023</li>
+              <li>SOCAMS — Apr 2023</li>
+              <li>MAA SoCal-Nevada Spring Meeting — Apr 2023</li>
             </ul>
           </Entry>
         </Section>
 
-        {/* Activities */}
-        <Section id="activities" icon={Users} title="Activities" kicker="07 — Off the clock">
-          <div className="grid gap-4 md:grid-cols-3">
-            <Entry title="ACM-W Co-Chair" meta="2019 – 2023" sub="Claremont, CA">
-              Ran workshops, mentorship & tech talks impacting 200+ people.
+        {/* Service */}
+        <Section id="service" icon={Users} title="Service" kicker="06 — Off the clock">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Entry title="Discrete Optimization Reading Group" meta="2025 – Present" sub="Co-Organizer">
+              Curate papers on online matching and rounding methods.
+            </Entry>
+            <Entry title="Cornell ORIE Grad Association" meta="2024 – 2025" sub="Co-President, WiOR Rep">
+              Workshops, mentorship, and events for 200+ people.
+            </Entry>
+            <Entry title="ACM-W" meta="2019 – 2023" sub="Co-Chair, Claremont">
+              Workshops and tech talks for women in computing.
             </Entry>
             <Entry title="Rewriting the Code" meta="Summer 2022" sub="Seattle Hub Leader">
-              Doubled event attendance vs. peer cities on a $4,500 budget.
-            </Entry>
-            <Entry title="Study Cloud Co-President" meta="2019 – 2021" sub="Web dev club">
-              Built a student resource-sharing site on DigitalOcean.
-            </Entry>
-          </div>
-        </Section>
-
-        {/* Projects */}
-        <Section id="projects" icon={Code2} title="Projects" kicker="08 — Side quests">
-          <div className="grid gap-4 md:grid-cols-3">
-            <Entry title="CS Class Preplacement (MIP)" meta="2021">
-              Mixed integer programming + goal programming to balance average
-              and maximin student happiness.
-            </Entry>
-            <Entry title="NMF Movie Recommender" meta="2021">
-              Non-negative matrix factorization to extract latent "genre"
-              features and predict ratings.
-            </Entry>
-            <Entry title="Global Climate Modeling" meta="2021">
-              Solved PDEs with the Legendre-Galerkin spectral method to model
-              temperature across time and latitude.
+              Doubled event attendance on a $4,500 budget.
             </Entry>
           </div>
         </Section>
 
         {/* Skills */}
-        <Section id="skills" icon={Sparkles} title="Skills" kicker="09 — Toolbox">
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-5">
-              <h3 className="mb-3 text-sm uppercase tracking-widest text-muted-foreground">Languages</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Python","Java","C++","AMPL","R","LaTeX","SQL","PHP","MATLAB","HTML","CSS","JavaScript"].map(s => (
-                  <span key={s} className="rounded-full bg-secondary px-3 py-1 text-sm text-secondary-foreground">{s}</span>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-5">
-              <h3 className="mb-3 text-sm uppercase tracking-widest text-muted-foreground">Frameworks & Tools</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Git","NumPy","AWS","Linux","React","Laravel"].map(s => (
-                  <span key={s} className="rounded-full bg-accent px-3 py-1 text-sm text-accent-foreground">{s}</span>
-                ))}
-              </div>
+        <Section id="skills" icon={Sparkles} title="Skills" kicker="07 — Toolbox">
+          <div className="rounded-xl border border-border bg-card p-4">
+            <div className="flex flex-wrap gap-1.5">
+              {["Python","Java","C++","AMPL","R","LaTeX","SQL","MATLAB","Git","NumPy","AWS","Linux"].map(s => (
+                <span key={s} className="rounded-full bg-secondary px-2.5 py-0.5 text-xs text-secondary-foreground">{s}</span>
+              ))}
             </div>
           </div>
         </Section>
 
         {/* Contact */}
-        <Section id="contact" icon={Mail} title="Let's talk" kicker="10 — Contact">
-          <div className="rounded-3xl border border-border bg-gradient-to-br from-card to-accent/40 p-8 md:p-12">
-            <p className="font-serif text-2xl md:text-3xl">
-              Always happy to chat about ranking algorithms, grad school, or
-              the best places to find a quiet whiteboard in Ithaca.
+        <Section id="contact" icon={Mail} title="Let's talk" kicker="08 — Contact">
+          <div className="rounded-2xl border border-border bg-gradient-to-br from-card to-accent/40 p-6 sm:p-8">
+            <p className="font-serif text-xl sm:text-2xl">
+              Always happy to chat about optimization, fairness, or where to
+              find a quiet whiteboard in Ithaca.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-5 flex flex-wrap gap-2.5">
               <a
-                href="mailto:claires.chang@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
+                href="mailto:csc258@cornell.edu"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
               >
-                <Mail className="h-4 w-4" /> claires.chang@gmail.com
+                <Mail className="h-4 w-4" />csc258@cornell.edu
               </a>
               <a
                 href="https://github.com/claireschang/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium"
               >
-                <Github className="h-4 w-4" /> github.com/claireschang
+                <Github className="h-4 w-4" />github.com/claireschang
               </a>
             </div>
           </div>
         </Section>
 
-        <footer className="border-t border-border py-10 text-center text-sm text-muted-foreground">
+        <footer className="border-t border-border py-8 text-center text-xs text-muted-foreground">
           © {new Date().getFullYear()} Claire Chang · Made with too much chai.
         </footer>
       </main>
