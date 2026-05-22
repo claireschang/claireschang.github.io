@@ -32,8 +32,8 @@
   --color-sage: var(--sage);
   --color-rose: var(--rose);
   --color-ochre: var(--ochre);
-  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
-  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 :root {
