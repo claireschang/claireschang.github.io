@@ -37,8 +37,8 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-16 py-8">
-      <h2 className="mb-5 text-lg font-semibold tracking-tight">
+    <section id={id} className="scroll-mt-16 border-t border-border py-8">
+      <h2 className="mb-6 text-lg font-semibold tracking-tight">
         <span className="marker-highlight">{title}</span>
       </h2>
       {children}
