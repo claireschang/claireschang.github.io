@@ -41,7 +41,8 @@
   --radius: 0.5rem;
   /* Light theme built from the requested palette:
      #e63946, #f1faee, #a8dadc, #457b9d, #1d3557.
-     Muted supporting text uses #0E402D for a neutral, non-link read. */
+     Muted supporting text stays within the palette at reduced opacity
+     so it reads as neutral gray rather than a link. */
   --background: #f1faee;
   --foreground: #1d3557;
   --card: #ffffff;
@@ -53,7 +54,7 @@
   --secondary: #a8dadc;
   --secondary-foreground: #1d3557;
   --muted: #e8f0f0;
-  --muted-foreground: #0e402d;
+  --muted-foreground: color-mix(in oklab, #1d3557 68%, transparent);
   --accent: #e63946;
   --accent-foreground: #f1faee;
   --destructive: #e63946;
@@ -79,7 +80,7 @@
   --secondary: #457b9d;
   --secondary-foreground: #f1faee;
   --muted: #264653;
-  --muted-foreground: #b8c5d1;
+  --muted-foreground: color-mix(in oklab, #f1faee 70%, transparent);
   --accent: #e63946;
   --accent-foreground: #f1faee;
   --destructive: #e63946;
