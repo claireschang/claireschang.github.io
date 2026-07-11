@@ -79,7 +79,7 @@
   --secondary: #457b9d;
   --secondary-foreground: #f1faee;
   --muted: #264653;
-  --muted-foreground: #a8dadc;
+  --muted-foreground: #b8c5d1;
   --accent: #e63946;
   --accent-foreground: #f1faee;
   --destructive: #e63946;
@@ -110,6 +110,12 @@
   h3 {
     font-family: var(--font-sans);
     letter-spacing: -0.01em;
+  }
+  em,
+  i,
+  .italic {
+    font-family: var(--font-sans);
+    font-style: italic;
   }
 }
 
