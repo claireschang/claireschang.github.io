@@ -69,29 +69,32 @@
 }
 
 .dark {
-  --background: #1d3557;
-  --foreground: #f1faee;
-  --card: #264653;
-  --card-foreground: #f1faee;
-  --popover: #264653;
-  --popover-foreground: #f1faee;
-  --primary: #f1faee;
-  --primary-foreground: #1d3557;
+  /* Dark theme sampled from the reference:
+     deep indigo background, near-white text, blue-gray nav/muted,
+     pink headshot ring, green social icons, purple-gray highlight. */
+  --background: #03012a;
+  --foreground: #f0eef6;
+  --card: #0d0b33;
+  --card-foreground: #f0eef6;
+  --popover: #0d0b33;
+  --popover-foreground: #f0eef6;
+  --primary: #f0eef6;
+  --primary-foreground: #03012a;
   --secondary: #457b9d;
-  --secondary-foreground: #f1faee;
-  --muted: #264653;
-  --muted-foreground: color-mix(in oklab, #f1faee 70%, transparent);
-  --accent: #e63946;
-  --accent-foreground: #f1faee;
+  --secondary-foreground: #f0eef6;
+  --muted: #191b3d;
+  --muted-foreground: #81a9d2;
+  --accent: #e0749a;
+  --accent-foreground: #f0eef6;
   --destructive: #e63946;
-  --destructive-foreground: #f1faee;
-  --border: #457b9d;
-  --input: #457b9d;
-  --ring: #e63946;
-  --sage: #457b9d;
-  --rose: #e63946;
-  --ochre: #a8dadc;
-  --mint: #a8dadc;
+  --destructive-foreground: #f0eef6;
+  --border: #23214a;
+  --input: #23214a;
+  --ring: #e0749a;
+  --sage: #81a9d2;
+  --rose: #e0749a;
+  --ochre: #81a9d2;
+  --mint: #c9eccf;
 }
 
 @layer base {
