@@ -32,60 +32,65 @@
   --color-sage: var(--sage);
   --color-rose: var(--rose);
   --color-ochre: var(--ochre);
-  --font-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --color-mint: var(--mint);
+  --font-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
-  /* Palette: #e63946 #f1faee #a8dadc #457b9d #1d3557 (CB-friendly tweaks) */
-  --background: oklch(0.98 0.012 150);          /* soft cream #f1faee */
-  --foreground: oklch(0.27 0.06 255);           /* deep navy #1d3557 */
-  --card: oklch(0.99 0.008 150);
-  --card-foreground: oklch(0.27 0.06 255);
-  --popover: oklch(0.99 0.008 150);
-  --popover-foreground: oklch(0.27 0.06 255);
-  --primary: oklch(0.5 0.1 250);                /* steel blue #457b9d, CB-safe */
-  --primary-foreground: oklch(0.98 0.012 150);
-  --secondary: oklch(0.9 0.04 200);             /* light cyan #a8dadc */
-  --secondary-foreground: oklch(0.27 0.06 255);
-  --muted: oklch(0.94 0.02 180);
-  --muted-foreground: oklch(0.45 0.04 240);
-  --accent: oklch(0.87 0.045 200);
-  --accent-foreground: oklch(0.27 0.06 255);
-  --destructive: oklch(0.6 0.18 35);            /* orange-red shift for CB safety */
-  --destructive-foreground: oklch(0.98 0.012 150);
-  --border: oklch(0.88 0.03 220);
-  --input: oklch(0.88 0.03 220);
-  --ring: oklch(0.5 0.1 250);
-  --sage: oklch(0.85 0.05 200);
-  --rose: oklch(0.62 0.16 35);
-  --ochre: oklch(0.5 0.1 250);
+  /* #f1eef7 haze and #03012c ink swap roles between the two themes; #2f6690
+     steel is the secondary text in both. Accents: #340068 violet, #b7c0ee
+     periwinkle, #c1edcc mint, #f06c9b pink. */
+  --background: oklch(0.954 0.012 301); /* #f1eef7 haze */
+  --foreground: oklch(0.141 0.087 271); /* #03012c ink */
+  --card: oklch(0.99 0.004 301); /* raised surfaces sit above the haze */
+  --card-foreground: oklch(0.141 0.087 271);
+  --popover: oklch(0.99 0.004 301);
+  --popover-foreground: oklch(0.141 0.087 271);
+  --primary: oklch(0.279 0.152 297); /* #340068 violet */
+  --primary-foreground: oklch(0.954 0.012 301);
+  --secondary: oklch(0.92 0.018 301);
+  --secondary-foreground: oklch(0.141 0.087 271);
+  --muted: oklch(0.92 0.018 301);
+  --muted-foreground: oklch(0.493 0.089 244); /* #2f6690 steel */
+  --accent: oklch(0.703 0.169 0); /* #f06c9b pink */
+  --accent-foreground: oklch(0.141 0.087 271);
+  --destructive: oklch(0.703 0.169 0);
+  --destructive-foreground: oklch(0.954 0.012 301);
+  --border: oklch(0.87 0.028 301);
+  --input: oklch(0.87 0.028 301);
+  --ring: oklch(0.703 0.169 0); /* pink focus ring */
+  --sage: oklch(0.816 0.066 276); /* #b7c0ee periwinkle */
+  --rose: oklch(0.703 0.169 0); /* #f06c9b */
+  --ochre: oklch(0.279 0.152 297); /* #340068 */
+  --mint: oklch(0.906 0.064 153); /* #c1edcc */
 }
 
 .dark {
-  --background: oklch(0.22 0.04 255);           /* deep navy base */
-  --foreground: oklch(0.95 0.012 150);
-  --card: oklch(0.26 0.045 255);
-  --card-foreground: oklch(0.95 0.012 150);
-  --popover: oklch(0.26 0.045 255);
-  --popover-foreground: oklch(0.95 0.012 150);
-  --primary: oklch(0.78 0.07 210);              /* light cyan accent */
-  --primary-foreground: oklch(0.22 0.04 255);
-  --secondary: oklch(0.32 0.05 250);
-  --secondary-foreground: oklch(0.95 0.012 150);
-  --muted: oklch(0.3 0.04 250);
-  --muted-foreground: oklch(0.75 0.03 200);
-  --accent: oklch(0.42 0.08 240);
-  --accent-foreground: oklch(0.95 0.012 150);
-  --destructive: oklch(0.68 0.17 35);
-  --destructive-foreground: oklch(0.22 0.04 255);
-  --border: oklch(0.36 0.05 250);
-  --input: oklch(0.36 0.05 250);
-  --ring: oklch(0.78 0.07 210);
-  --sage: oklch(0.6 0.06 200);
-  --rose: oklch(0.7 0.14 35);
-  --ochre: oklch(0.78 0.07 210);
+  --background: oklch(0.141 0.087 271); /* #03012c ink */
+  --foreground: oklch(0.954 0.012 301); /* #f1eef7 */
+  --card: oklch(0.2 0.09 275);
+  --card-foreground: oklch(0.954 0.012 301);
+  --popover: oklch(0.2 0.09 275);
+  --popover-foreground: oklch(0.954 0.012 301);
+  --primary: oklch(0.954 0.012 301);
+  --primary-foreground: oklch(0.141 0.087 271);
+  --secondary: oklch(0.24 0.09 275);
+  --secondary-foreground: oklch(0.954 0.012 301);
+  --muted: oklch(0.24 0.09 275);
+  --muted-foreground: oklch(0.72 0.085 244); /* #2f6690 lifted for contrast */
+  --accent: oklch(0.703 0.169 0);
+  --accent-foreground: oklch(0.141 0.087 271);
+  --destructive: oklch(0.703 0.169 0);
+  --destructive-foreground: oklch(0.141 0.087 271);
+  --border: oklch(0.3 0.08 272);
+  --input: oklch(0.3 0.08 272);
+  --ring: oklch(0.703 0.169 0);
+  --sage: oklch(0.816 0.066 276); /* #b7c0ee */
+  --rose: oklch(0.703 0.169 0);
+  --ochre: oklch(0.72 0.085 244);
+  --mint: oklch(0.906 0.064 153); /* #c1edcc */
 }
 
 @layer base {
@@ -99,25 +104,75 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
   }
-  h1, h2, h3 {
-    font-family: var(--font-serif);
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-sans);
     letter-spacing: -0.01em;
   }
 }
 
 @layer utilities {
-  .paper-grain {
-    background-image:
-      radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--foreground) 8%, transparent) 1px, transparent 0);
-    background-size: 22px 22px;
+  /* Links inside prose: body weight, underlined; the pink carries the emphasis. */
+  .prose-links a {
+    color: var(--foreground);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--rose);
+    transition:
+      color 0.15s ease,
+      text-decoration-color 0.15s ease;
   }
-  .squiggle {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'><path d='M0 4 Q 10 0 20 4 T 40 4 T 60 4 T 80 4' fill='none' stroke='currentColor' stroke-width='1.5'/></svg>");
-    background-repeat: repeat-x;
-    background-position: bottom;
-    background-size: 80px 8px;
-    padding-bottom: 6px;
+  .prose-links a:hover {
+    color: var(--rose);
+    text-decoration-color: var(--rose);
+  }
+
+  /* Highlighter swipe behind section headings: mint on the light ground,
+     periwinkle on the dark one (mint would glare against the ink). */
+  .marker-highlight {
+    background-image: linear-gradient(to top, var(--mint) 0, var(--mint) 45%, transparent 45%);
+    box-decoration-break: clone;
+    padding: 0 0.25em 0.05em;
+    margin-left: -0.25em;
+  }
+  .dark .marker-highlight {
+    background-image: linear-gradient(
+      to top,
+      color-mix(in oklab, var(--sage) 70%, transparent) 0,
+      color-mix(in oklab, var(--sage) 70%, transparent) 45%,
+      transparent 45%
+    );
+  }
+
+  /* [arXiv] / [doi] chips: mint fill, no underline — they read as tags, not prose links. */
+  .tag,
+  .prose-links a.tag {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 0.05em 0.55em;
+    font-size: 0.8em;
+    line-height: 1.5;
+    text-decoration: none;
+    color: var(--foreground);
+    background-color: color-mix(in oklab, var(--mint) 70%, var(--background));
+    transition: background-color 0.15s ease;
+  }
+  .dark .tag,
+  .dark .prose-links a.tag {
+    color: var(--mint);
+    background-color: color-mix(in oklab, var(--mint) 16%, var(--background));
+  }
+  .tag:hover,
+  .prose-links a.tag:hover {
+    color: var(--foreground);
+    background-color: var(--mint);
+  }
+  .dark .tag:hover,
+  .dark .prose-links a.tag:hover {
+    color: var(--background);
+    background-color: var(--mint);
   }
 }
