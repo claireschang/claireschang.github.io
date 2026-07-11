@@ -90,13 +90,13 @@ function Index() {
 
       <main id="top" className="mx-auto max-w-2xl px-5">
         {/* Profile */}
-        <section className="flex flex-col items-center py-14 text-center">
+        <section className="flex flex-col items-center pb-8 pt-10 text-center">
           <img
             src="/headshot.jpg"
             alt="Claire Chang"
             width={160}
             height={160}
-            className="h-40 w-40 rounded-full object-cover ring-2 ring-rose ring-offset-4 ring-offset-background"
+            className="h-40 w-40 rounded-full object-cover ring-1 ring-border ring-offset-2 ring-offset-background"
           />
           <h1 className="mt-6 text-3xl font-semibold tracking-tight">Claire Chang</h1>
 
@@ -149,7 +149,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-7 flex items-center justify-center gap-5 text-muted-foreground dark:text-mint">
+          <div className="mt-5 flex items-center justify-center gap-5 text-muted-foreground dark:text-mint">
             <a
               href={mailtoHref}
               onClick={(e) => {
