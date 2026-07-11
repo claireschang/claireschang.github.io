@@ -155,8 +155,8 @@
   .dark .marker-highlight {
     background-image: linear-gradient(
       to top,
-      color-mix(in oklab, var(--sage) 70%, transparent) 0,
-      color-mix(in oklab, var(--sage) 70%, transparent) 45%,
+      color-mix(in oklab, #8286b1 85%, transparent) 0,
+      color-mix(in oklab, #8286b1 85%, transparent) 45%,
       transparent 45%
     );
   }
