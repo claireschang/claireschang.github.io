@@ -33,64 +33,64 @@
   --color-rose: var(--rose);
   --color-ochre: var(--ochre);
   --color-mint: var(--mint);
-  --font-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
-  /* #f1eef7 haze and #03012c ink swap roles between the two themes; #2f6690
-     steel is the secondary text in both. Accents: #340068 violet, #b7c0ee
-     periwinkle, #c1edcc mint, #f06c9b pink. */
-  --background: oklch(0.954 0.012 301); /* #f1eef7 haze */
-  --foreground: oklch(0.141 0.087 271); /* #03012c ink */
-  --card: oklch(0.99 0.004 301); /* raised surfaces sit above the haze */
-  --card-foreground: oklch(0.141 0.087 271);
-  --popover: oklch(0.99 0.004 301);
-  --popover-foreground: oklch(0.141 0.087 271);
-  --primary: oklch(0.279 0.152 297); /* #340068 violet */
-  --primary-foreground: oklch(0.954 0.012 301);
-  --secondary: oklch(0.92 0.018 301);
-  --secondary-foreground: oklch(0.141 0.087 271);
-  --muted: oklch(0.92 0.018 301);
-  --muted-foreground: oklch(0.493 0.089 244); /* #2f6690 steel */
-  --accent: oklch(0.703 0.169 0); /* #f06c9b pink */
-  --accent-foreground: oklch(0.141 0.087 271);
-  --destructive: oklch(0.703 0.169 0);
-  --destructive-foreground: oklch(0.954 0.012 301);
-  --border: oklch(0.87 0.028 301);
-  --input: oklch(0.87 0.028 301);
-  --ring: oklch(0.703 0.169 0); /* pink focus ring */
-  --sage: oklch(0.816 0.066 276); /* #b7c0ee periwinkle */
-  --rose: oklch(0.703 0.169 0); /* #f06c9b */
-  --ochre: oklch(0.279 0.152 297); /* #340068 */
-  --mint: oklch(0.906 0.064 153); /* #c1edcc */
+  /* Light theme built from the requested palette:
+     #e63946, #f1faee, #a8dadc, #457b9d, #1d3557.
+     Muted supporting text uses #0E402D for a neutral, non-link read. */
+  --background: #f1faee;
+  --foreground: #1d3557;
+  --card: #ffffff;
+  --card-foreground: #1d3557;
+  --popover: #ffffff;
+  --popover-foreground: #1d3557;
+  --primary: #1d3557;
+  --primary-foreground: #f1faee;
+  --secondary: #a8dadc;
+  --secondary-foreground: #1d3557;
+  --muted: #e8f0f0;
+  --muted-foreground: #0e402d;
+  --accent: #e63946;
+  --accent-foreground: #f1faee;
+  --destructive: #e63946;
+  --destructive-foreground: #f1faee;
+  --border: #a8dadc;
+  --input: #a8dadc;
+  --ring: #e63946;
+  --sage: #457b9d;
+  --rose: #e63946;
+  --ochre: #1d3557;
+  --mint: #a8dadc;
 }
 
 .dark {
-  --background: oklch(0.141 0.087 271); /* #03012c ink */
-  --foreground: oklch(0.954 0.012 301); /* #f1eef7 */
-  --card: oklch(0.2 0.09 275);
-  --card-foreground: oklch(0.954 0.012 301);
-  --popover: oklch(0.2 0.09 275);
-  --popover-foreground: oklch(0.954 0.012 301);
-  --primary: oklch(0.954 0.012 301);
-  --primary-foreground: oklch(0.141 0.087 271);
-  --secondary: oklch(0.24 0.09 275);
-  --secondary-foreground: oklch(0.954 0.012 301);
-  --muted: oklch(0.24 0.09 275);
-  --muted-foreground: oklch(0.72 0.085 244); /* #2f6690 lifted for contrast */
-  --accent: oklch(0.703 0.169 0);
-  --accent-foreground: oklch(0.141 0.087 271);
-  --destructive: oklch(0.703 0.169 0);
-  --destructive-foreground: oklch(0.141 0.087 271);
-  --border: oklch(0.3 0.08 272);
-  --input: oklch(0.3 0.08 272);
-  --ring: oklch(0.703 0.169 0);
-  --sage: oklch(0.816 0.066 276); /* #b7c0ee */
-  --rose: oklch(0.703 0.169 0);
-  --ochre: oklch(0.72 0.085 244);
-  --mint: oklch(0.906 0.064 153); /* #c1edcc */
+  --background: #1d3557;
+  --foreground: #f1faee;
+  --card: #264653;
+  --card-foreground: #f1faee;
+  --popover: #264653;
+  --popover-foreground: #f1faee;
+  --primary: #f1faee;
+  --primary-foreground: #1d3557;
+  --secondary: #457b9d;
+  --secondary-foreground: #f1faee;
+  --muted: #264653;
+  --muted-foreground: #b8c5d1;
+  --accent: #e63946;
+  --accent-foreground: #f1faee;
+  --destructive: #e63946;
+  --destructive-foreground: #f1faee;
+  --border: #457b9d;
+  --input: #457b9d;
+  --ring: #e63946;
+  --sage: #457b9d;
+  --rose: #e63946;
+  --ochre: #a8dadc;
+  --mint: #a8dadc;
 }
 
 @layer base {
@@ -111,10 +111,16 @@
     font-family: var(--font-sans);
     letter-spacing: -0.01em;
   }
+  em,
+  i,
+  .italic {
+    font-family: var(--font-sans);
+    font-style: italic;
+  }
 }
 
 @layer utilities {
-  /* Links inside prose: body weight, underlined; the pink carries the emphasis. */
+  /* Links inside prose: body weight, underlined; the rose carries the emphasis. */
   .prose-links a {
     color: var(--foreground);
     text-decoration: underline;
@@ -130,10 +136,14 @@
     text-decoration-color: var(--rose);
   }
 
-  /* Highlighter swipe behind section headings: mint on the light ground,
-     periwinkle on the dark one (mint would glare against the ink). */
+  /* Single marker highlight behind section headings. */
   .marker-highlight {
-    background-image: linear-gradient(to top, var(--mint) 0, var(--mint) 45%, transparent 45%);
+    background-image: linear-gradient(
+      to top,
+      var(--mint) 0,
+      var(--mint) 45%,
+      transparent 45%
+    );
     box-decoration-break: clone;
     padding: 0 0.25em 0.05em;
     margin-left: -0.25em;
@@ -147,7 +157,7 @@
     );
   }
 
-  /* [arXiv] / [doi] chips: mint fill, no underline — they read as tags, not prose links. */
+  /* [arXiv] / [doi] chips: mint fill, no underline. */
   .tag,
   .prose-links a.tag {
     display: inline-block;
