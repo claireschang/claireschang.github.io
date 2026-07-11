@@ -96,7 +96,7 @@ function Index() {
             alt="Claire Chang"
             width={160}
             height={160}
-            className="h-40 w-40 rounded-full object-cover ring-1 ring-border ring-offset-2 ring-offset-background"
+            className="h-40 w-40 rounded-full object-cover ring-2 ring-rose ring-offset-2 ring-offset-background"
           />
           <h1 className="mt-6 text-3xl font-semibold tracking-tight">Claire Chang</h1>
 

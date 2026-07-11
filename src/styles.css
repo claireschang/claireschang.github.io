@@ -43,29 +43,29 @@
      #e63946, #f1faee, #a8dadc, #457b9d, #1d3557.
      Muted supporting text stays within the palette at reduced opacity
      so it reads as neutral gray rather than a link. */
-  --background: #f1faee;
-  --foreground: #1d3557;
+  --background: #f0eef6;
+  --foreground: #03012a;
   --card: #ffffff;
-  --card-foreground: #1d3557;
+  --card-foreground: #03012a;
   --popover: #ffffff;
-  --popover-foreground: #1d3557;
-  --primary: #1d3557;
-  --primary-foreground: #f1faee;
+  --popover-foreground: #03012a;
+  --primary: #03012a;
+  --primary-foreground: #f0eef6;
   --secondary: #a8dadc;
-  --secondary-foreground: #1d3557;
-  --muted: #e8f0f0;
-  --muted-foreground: color-mix(in oklab, #1d3557 68%, transparent);
-  --accent: #e63946;
-  --accent-foreground: #f1faee;
+  --secondary-foreground: #03012a;
+  --muted: #e6e4ee;
+  --muted-foreground: #5f7fa0;
+  --accent: #e0749a;
+  --accent-foreground: #f0eef6;
   --destructive: #e63946;
-  --destructive-foreground: #f1faee;
-  --border: #a8dadc;
-  --input: #a8dadc;
-  --ring: #e63946;
+  --destructive-foreground: #f0eef6;
+  --border: #d9d7e2;
+  --input: #d9d7e2;
+  --ring: #e0749a;
   --sage: #457b9d;
-  --rose: #e63946;
-  --ochre: #1d3557;
-  --mint: #a8dadc;
+  --rose: #e0749a;
+  --ochre: #03012a;
+  --mint: #c9eccf;
 }
 
 .dark {
